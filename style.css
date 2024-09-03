@@ -151,6 +151,7 @@ img{
     grid-template-columns: 1fr 1fr; /* Dua kolom */
     grid-template-rows: 1fr 1fr; /* Dua baris */
     row-gap: 0px;
+    flex-wrap: nowrap;
     column-gap: 1px;
     padding: 20px;
     height: 100vh;
@@ -162,7 +163,6 @@ img{
     width: 300px; /* Menyesuaikan lebar box */
     text-align: center;
     padding: 10px;
-    letter-spacing: .1rem; /* memberi jarak pada teks */
     box-sizing: border-box; /* Menghitung padding dan border di dalam ukuran elemen */
 }
 
@@ -194,15 +194,16 @@ img{
 }
 
 .produktif-tks{
-    letter-spacing: .1rem;
+    
+    font-size: 12px;
 
 }
 .produktif-tks h1,p,a{
-    padding: 10px;
+    padding: 12px;
 }
 
 .produktif-tks h1{
-    font-size: 40px;
+    font-size: 30px;
     padding-right: 200px;
 }
 
@@ -247,6 +248,7 @@ img{
 /* style box */
 .box-review{
     border-radius: 10px;
+    font-size: 15px;
     padding: 1.5rem;
     background-color: var(--DarkBluet);
 
@@ -421,4 +423,40 @@ img{
     }
 
     
+}
+
+
+@media (max-width: 375px) {
+    .section-bg,.section-footer{
+        width: 106%;
+    }
+    .logo{
+        width: 6rem;
+        
+    }
+    .navbar a{
+        font-size: 14px;
+        padding:5px 8px ;
+    }
+    
+    .controller-heading img{
+        width: 20rem;
+        margin-left: 4rem;
+    }
+    .fitur-box{
+        margin-bottom: 30px;
+    }
+
+    .fitur-box p{
+        margin-top: 1px;
+    }
+    .styproduktif {
+        flex-direction: column;
+        padding: 1rem;
+        padding-top: 47rem;
+    }
+
+    .produktif-img{
+        width: 20rem;
+    }
 }
