@@ -1,0 +1,424 @@
+
+:root {
+    --Cyan : hsl(176, 68%, 64%);
+    --Blue : hsl(198, 60%, 50%);
+    --Lightred : hsl(0, 100%, 63%);
+    --DarkBluei : hsl(217, 28%, 15%);
+    --DarkBluem : hsl(218, 28%, 13%);
+    --DarkBluef : hsl(216, 53%, 9%);
+    --DarkBluet : hsl(219, 30%, 18%);
+    --White: hsl(0, 0%, 100%);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize; /* agar setiap kata baru huruf depannya capital */
+    box-sizing: border-box; /* agar item yang ada di dalam box ukurannya tetap dan tidak melebihi box itu tersendiri contoh ketika widthnya 200 maka border paddingnya termasuk dari total widthnya  */
+    text-decoration: none; /* agar dekorisai seperti garis bawah,bold,kata miring tidak ada */
+    color:var(--White);
+}
+
+body{
+    background-image: url(img/bg-curvy-desktop.svg);
+    background-color: var(--DarkBluet);
+    background-size:cover; /* agar bg mengisi seluruh layar */
+    background-repeat: no-repeat; /* agar bg tidak mengulang/duplikat */
+    background-position: center 30rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    height: 100vh;
+}
+
+.section-bg{
+    background-color: var(--DarkBluem);
+}
+.section-footer{
+    background-color: var(--DarkBluef);
+}
+
+/* style navbar */
+header{
+    display: flex;
+    position: fixed; /* agar posisi box mengikuti layar ketika di scroll */
+    top:0; left: 0; right:0;  /* ini yan membuat item pada navbar bisa menyamping */
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+    z-index: 1000; /* agar navbar tetap berada di posisi paling atas dari item" lainnya */
+    background-color: var(--DarkBluei);
+    
+}
+
+.logo{
+    width: 9rem;
+    height: auto;
+    padding-left: 25px;
+}
+.navbar{
+    padding: 15px;
+}
+
+.navbar a{
+    padding: .5rem 2rem;
+    color: var(--White);
+    transition: background 0.3s ease;
+
+}
+
+.navbar a:hover{
+    color: hsl(0, 0%, 74%);
+    letter-spacing: 1px;
+
+}
+/* navbar end */
+
+/* style controller */
+.controller-heading{
+    display: flex; /* agar item pada display flexsible bisa di ubah tempatnya */
+    flex-direction: column; /* agar arah flexiblenya menjadi kolom/kebawah */
+    align-items: center;
+    margin-bottom: 2rem;
+    justify-content:center;
+    margin-top: 6rem;
+}
+
+/* style img */
+img{
+    width: 100%;
+    height: auto;
+    max-width: 600px; /* maximal lebar */
+}
+/* img end */
+
+/* style teks */
+.teks{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 1.3rem;
+    width: 40%;
+}
+
+.teks h1{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.teks p{
+    white-space: normal;
+    font-size: 14px;
+    margin-bottom: 5px;
+    
+}
+/* teks emd */
+
+ /* style btn */
+.btn{
+    display: inline-block;
+    font-size: 14px;
+    width: 220px;
+    color:#fff;
+    background: var(--Blue);
+    border-radius: 2rem;
+    padding:15px 18px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+    letter-spacing: .1rem;
+    transition: background 0.3s ease;
+}
+.btn:hover{
+    background-color: hsla(198, 73%, 38%, 0.87);
+    letter-spacing: 3.5px;
+}
+/* btn end */
+
+/* controller end */
+
+/* style fitur */
+.controller-fitur{
+    padding: 0px 100px;
+
+}
+
+.fitur {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dua kolom */
+    grid-template-rows: 1fr 1fr; /* Dua baris */
+    row-gap: 0px;
+    column-gap: 1px;
+    padding: 20px;
+    height: 100vh;
+    align-items: center; /* Memusatkan secara vertikal di dalam cell grid */
+    justify-items: center; /* Memusatkan secara horizontal di dalam cell grid */
+}
+
+.fitur-box {
+    width: 300px; /* Menyesuaikan lebar box */
+    text-align: center;
+    padding: 10px;
+    letter-spacing: .1rem; /* memberi jarak pada teks */
+    box-sizing: border-box; /* Menghitung padding dan border di dalam ukuran elemen */
+}
+
+.fitur img {
+    width: 90px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.fitur-box h3{
+    font-size: 20px;
+}
+.fitur-box p{
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+
+/* fitur end */
+
+/* style styproduktif */
+
+.styproduktif{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 6rem;
+    gap: 2rem;
+}
+
+.produktif-tks{
+    letter-spacing: .1rem;
+
+}
+.produktif-tks h1,p,a{
+    padding: 10px;
+}
+
+.produktif-tks h1{
+    font-size: 40px;
+    padding-right: 200px;
+}
+
+
+.produktif-tks a{
+    position: relative;
+    display: inline-block;
+    color: var(--Cyan);
+}
+
+/* membuat underline */
+.produktif-tks a::after{
+    content: '';
+    position: absolute;
+    left: 10px;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: currentColor;
+    box-shadow: 10px 0px 0 currentColor;
+}
+/* underline done */
+
+.produktif-tks img{
+    width: 13px;
+    height: auto;
+}
+
+.produktif-img img{
+    width: 35rem;
+    height: auto;
+
+}
+
+/* style review */
+.review{
+    display: flex;
+    gap: 30px;
+    padding: 5rem;
+}
+
+/* style box */
+.box-review{
+    border-radius: 10px;
+    padding: 1.5rem;
+    background-color: var(--DarkBluet);
+
+}
+/* box end */
+
+.profile{
+    font-size: 12px;
+    display: flex;
+}
+
+.identity{
+    padding-top: 25px;
+}
+
+.headtext{
+    font-size: 1.3rem;
+    font-weight: bold;
+
+}
+.subtext{
+    font-size: 10px;
+}
+.profile img{
+    width: 30px;
+    height: auto;
+    border-radius: 360px;
+    margin: 40px 20px;
+}
+/* review end */
+
+/* footer */
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 2.5rem;
+}
+.footer-box{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.footer-box img{
+    margin-bottom: 20px;
+}
+
+/* Media Query untuk Tablet (min-width: 768px) */
+@media (max-width: 768px) {
+    .teks {
+        width: 80%;
+    }
+
+    .styproduktif {
+        flex-direction: column;
+        padding: 2rem;
+        padding-top: 25rem;
+    }
+
+    .produktif-tks h1 {
+        font-size: 30px;
+        padding-right: 0;
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .produktif-img img {
+        width: 100%;
+    }
+
+    .fitur {
+        grid-template-columns: 1fr;
+    }
+
+    .fitur-box {
+        width: 100%;
+    }
+
+    .review {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem;
+    }
+
+    .footer-box {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* Media Query untuk Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    .logo {
+        padding-left: 0;
+    }
+
+    .navbar {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        padding-right: 0;
+
+    }
+
+    .navbar a {
+        padding: .5rem 1rem;
+    }
+
+    .controller-heading {
+        margin-top: 8rem;
+    }
+    .gambar{
+        width: 400px;
+    }
+
+    .teks {
+        width: 90%;
+    }
+
+    .fitur {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .fitur-box {
+        width: 100%;
+    }
+
+    .styproduktif {
+        flex-direction: column;
+        padding: 1rem;
+        padding-top: 38rem;
+    }
+
+    .produktif-tks h1 {
+        font-size: 24px;
+        padding-right: 0;
+    }
+
+    .produktif-tks p {
+        font-size: 14px;
+    }
+
+    .review {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .footer-box {
+        width: 100%;
+        text-align: center;
+    }
+
+    
+}
